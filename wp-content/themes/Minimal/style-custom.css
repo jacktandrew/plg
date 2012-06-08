@@ -1,0 +1,61 @@
+* {text-shadow: none; text-decoration: none;}
+body {background: #701211;}
+
+*.unselectable {
+   -moz-user-select: -moz-none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+   /*
+     Introduced in IE 10.
+     See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
+   */
+   -ms-user-select: none;
+   user-select: none;
+}
+
+.shadow {
+  -webkit-box-shadow: 10px 10px 10px gray;
+  -moz-box-shadow: 10px 10px 10px gray;
+  -o-box-shadow: 10px 10px 10px gray;
+  box-shadow: 10px 10px 10px gray;
+}
+
+
+
+div#logo-custom {background: url(images/custom/logo.jpg) center no-repeat; height: 400px;}
+
+div#wrapper {background: #2e3335; margin: 0 auto; width: 900px; height: 2000px; padding-top: 50px;}
+div#header {background: white; margin:50px -180px; padding: 40px; overflow: hidden;}
+ul.superfish.nav { width: 960px; margin: 0 auto; background: #302f2f; border: none;}
+  
+ul.superfish.nav li a {color: white;}
+ul.superfish.nav li {border: 3px outset #302F2F;}
+ul.superfish.nav > li:hover {background: #701211; border: 3px outset #701211;}
+ul.superfish.nav li:hover .triangle {display: block;}
+
+
+div#carousel1 { width:500px; height:300px; margin: 0 auto;}
+#alt-text, #title-text {text-shadow: none; color: #aaa; width: 500px; margin: 20px auto;}
+#title-text {}
+#alt-text {}
+
+#left-but, #right-but {font-size: 90px; position: relative; top: -200px; cursor: pointer;}
+#left-but:hover, #right-but:hover {color: #666;}
+#left-but {left: -300px;}
+#right-but {left: 300px;}
+
+.triangle {
+  display: none;
+  position: relative;
+  top: 48px;
+  left: 18px;
+  font-size: 0px;
+  line-height: 0%;
+  width: 0px;
+  border-right: 20px solid rgba(255, 255, 255, 0);
+  border-top: 20px solid #701211;
+  -webkit-filter: drop-shadow(5px 5px 5px gray);
+  -moz-filter: drop-shadow(5px 5px 5px gray);
+  -o-filter: drop-shadow(5px 5px 5px gray);
+  -filter: drop-shadow(5px 5px 5px gray);
+}
