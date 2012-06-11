@@ -52,9 +52,10 @@ jQuery(document).ready(function(){
     titleBox: jQuery("#title-text")
   });
   
- jQuery("ul.superfish.nav").addClass('shadow');
- jQuery("ul.superfish.nav li a").after("<div class='triangle'></div>");
-
+ jQuery("#header > ul.superfish.nav").addClass('shadow');
+ jQuery("#header > ul.superfish.nav > li > a").after("<div class='triangle'></div>");
+ jQuery("ul.superfish.nav ul.children li").before("<div class='blocker'>");
+ jQuery("ul.superfish.nav ul.children li").after("</div>");  
 
 });
 </script>
