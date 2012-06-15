@@ -7,13 +7,13 @@
 <?php elegant_keywords(); ?>
 <?php elegant_canonical(); ?>
 
-<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
+<!-- <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" /> -->
 <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/style-custom.css" />
 <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
 <link rel="alternate" type="application/atom+xml" title="<?php bloginfo('name'); ?> Atom Feed" href="<?php bloginfo('atom_url'); ?>" />
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
-
-
+<link rel="stylesheet" href="<?php bloginfo("template_url"); ?>/js/nivoslider/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="<?php bloginfo("template_url"); ?>/js/jcoverflip/jcoverflip.css" type="text/css" media="screen" />
 
 <!--[if lt IE 7]>
   <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/css/ie6style.css" />
@@ -31,17 +31,16 @@
 <?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
 
 
-
-
-<?php wp_enqueue_script('jquery'); ?>
+<?php wp_enqueue_script('jQuery'); ?>
 <?php wp_head(); ?>
 
-<link rel="stylesheet" href="<?php bloginfo("template_url"); ?>/js/nivoslider/nivo-slider.css" type="text/css" media="screen" />
-<script src="<?php bloginfo("template_url"); ?>/js/nivoslider/jquery.nivo.slider.pack.js"></script>
+<script src="<?php bloginfo("template_url"); ?>/js/jcoverflip/jQuery-ui.min.js"></script>
+<script src="<?php bloginfo("template_url"); ?>/js/jcoverflip/jQuery.jcoverflip.js"></script>
+<script src="<?php bloginfo("template_url"); ?>/js/nivoslider/jQuery.nivo.slider.pack.js"></script>
 <script src="<?php bloginfo("template_url"); ?>/js/cloud-carousel/cloud-carousel.1.0.5.js"></script>
 <script>
-jQuery(document).ready(function(){
-  jQuery('#slider').nivoSlider();
+jQuery(function(){
+  jQuery('#slider1').nivoSlider();
 
   jQuery("#carousel1").CloudCarousel({      
     xPos: 250,
@@ -51,38 +50,54 @@ jQuery(document).ready(function(){
     altBox: jQuery("#alt-text"),
     titleBox: jQuery("#title-text")
   });
-  
- jQuery("#header > ul.superfish.nav").addClass('shadow');
- jQuery("#header > ul.superfish.nav > li > a").after("<div class='triangle'></div>");
- jQuery("ul.superfish.nav ul.children li").before("<div class='blocker'>");
- jQuery("ul.superfish.nav ul.children li").after("</div>");  
 
+  jQuery("ul.superfish.nav").addClass('shadow');
+  jQuery("ul.superfish.nav > li > a").after("<div class='triangle'></div>");
+  jQuery("ul.superfish.nav ul.children li").before("<div class='blocker'>");
+  jQuery("ul.superfish.nav ul.children li").after("</div>");
 });
 </script>
 
 </head>
 <body<?php if (is_front_page()) echo(' id="home"'); ?>>
-  <div id="logo-custom"></div>      
-    <div id="wrapper">
-    <div id="header">
-        <div class="clear"></div>
-        <?php $menuClass = 'superfish nav clearfix';
-        $primaryNav = '';
-        
-        if (function_exists('wp_nav_menu')) {
-          $primaryNav = wp_nav_menu( array( 'theme_location' => 'primary-menu', 'container' => '', 'fallback_cb' => '', 'menu_class' => $menuClass, 'echo' => false ) );
-        };
-        if ($primaryNav == '') { ?>
-          <ul class="<?php echo $menuClass; ?>">
-            <?php if (get_option('minimal_home_link') == 'on') { ?>
-              <li <?php if (is_front_page()) echo('class="current_page_item"') ?>><a href="<?php bloginfo('url'); ?>"><?php esc_html_e('Home','Minimal'); ?></a></li>
-            <?php }; ?>
+  <header class="custom">
+    <div class="contact_box">
+      <h4>Free Consultation</h4>
+      <div class="phone_location">
+        <h5>Call Toll Free</h5>
+        <h5>Seattle Area</h5>
+        <h5>South King County</h5>
+      </div>
+      <div class="phone_number">
+        <h5>888.852.0068</h5>
+        <h5>206.285.1743</h5>
+        <h5>253.359.9984</h5>
+      </div>
+      <h6>Follow &nbsp; on:</h6>
+      <a class="fb" href="http://www.facebook.com/premierlawgroup"></a>
+      <a class="tw" href="http://twitter.com/premierlawgroup"></a>
+      <a class="yt" href="http://www.youtube.com/user/CarAccidentAttorney1"></a>
+      <!-- <a class="chat_now" href=""></a> -->
+    </div>
+    <div id="logo_custom"></div>
+    <div class="clear"></div>
+    <?php $menuClass = 'superfish nav clearfix';
+    $primaryNav = '';
+    
+    if (function_exists('wp_nav_menu')) {
+      $primaryNav = wp_nav_menu( array( 'theme_location' => 'primary-menu', 'container' => '', 'fallback_cb' => '', 'menu_class' => $menuClass, 'echo' => false ) );
+    };
+    if ($primaryNav == '') { ?>
+      <ul class="<?php echo $menuClass; ?>">
+        <?php if (get_option('minimal_home_link') == 'on') { ?>
+          <li <?php if (is_front_page()) echo('class="current_page_item"') ?>><a href="<?php bloginfo('url'); ?>"><?php esc_html_e('Home','Minimal'); ?></a></li>
+        <?php }; ?>
 
-            <?php show_categories_menu($menuClass,false); ?>
-            
-            <?php show_page_menu($menuClass,false,false); ?>
-          </ul> <!-- end ul.nav -->
-        <?php }
-        else echo($primaryNav); ?>
-                  
-    </div> <!-- end #header -->
+        <?php show_categories_menu($menuClass,false); ?>
+        
+        <?php show_page_menu($menuClass,false,false); ?>
+      </ul> <!-- end ul.nav -->
+    <?php }
+    else echo($primaryNav); ?>
+  </header>
+    <div id="wrapper" class="clearfix">

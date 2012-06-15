@@ -1,4 +1,4 @@
-<?php 
+<?php
 add_action( 'after_setup_theme', 'et_setup_theme' );
 if ( ! function_exists( 'et_setup_theme' ) ){
 	function et_setup_theme(){
