@@ -40,6 +40,14 @@
 <script src="<?php bloginfo("template_url"); ?>/js/cloud-carousel/cloud-carousel.1.0.5.js"></script>
 <script>
 jQuery(function(){
+  jQuery('#sidebar nav a').click(function(event){
+    event.preventDefault();
+    var link = jQuery(this).data('link')
+    console.log(link)
+    jQuery('#sidebar > div').hide();
+    jQuery('#sidebar .' + link).show();
+  });
+  
   jQuery('#slider1').nivoSlider();
 
   jQuery("#carousel1").CloudCarousel({      
@@ -77,6 +85,7 @@ jQuery(function(){
       <a class="fb" href="http://www.facebook.com/premierlawgroup"></a>
       <a class="tw" href="http://twitter.com/premierlawgroup"></a>
       <a class="yt" href="http://www.youtube.com/user/CarAccidentAttorney1"></a>
+      <a class="gp" href="https://plus.google.com/100614141035772243773/posts"></a>
       <!-- <a class="chat_now" href=""></a> -->
     </div>
     <div id="logo_custom"></div>

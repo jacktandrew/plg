@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Jack's Custom
+Template Name: Jack's Custom Mobile
 */
 ?>
 <?php get_header(); ?>
@@ -38,5 +38,6 @@ Template Name: Jack's Custom
 		<?php endwhile; endif; ?>
 		</div> <!-- end #content-area -->	
 	</div> <!-- end #content -->
-<?php get_sidebar(); ?>
-<?php get_footer(); ?>	
+
+<?php get_footer(); ?>
+

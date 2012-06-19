@@ -23,6 +23,7 @@ a { text-decoration: none; }
 *:first-child+html .clearfix { zoom: 1; } /* IE7 */
 
 .sf-sub-indicator {display: none;}
+*.clear {clear: both;}
 
 *.unselectable {
    -moz-user-select: -moz-none;
@@ -66,7 +67,7 @@ header .contact_box h4 {font-weight: bold; margin: 5px 0 5px;}
 .contact_box h4, .contact_box h5, .contact_box h6, .contact_box p {color: #ccc; font-family: myriad pro, arial, sans-serif;}
 .contact_box .phone_location, .contact_box .phone_number {float: left;}
 header .contact_box .phone_location {margin-right: 15px; padding-right: 15px; border-right: 1px dotted #ccc; height: 45px;}
-header .contact_box h6 {float: left; margin: 18px 0 0 44px;}
+header .contact_box h6 {float: left; margin: 18px 0 0 11px;}
 header .contact_box a {height: 33px; width: 33px; float: right; margin: 5px;}
 header .contact_box a:hover {
   -webkit-box-shadow: 1px 1px 1px gray;
@@ -74,7 +75,8 @@ header .contact_box a:hover {
   -o-box-shadow: 1px 1px 1px gray;
   box-shadow: 1px 1px 1px gray;
 }
-header .contact_box .fb {background: url(images/custom/fb_33.jpg);margin-right: 20px;}
+header .contact_box .gp {background: url(images/custom/gp_33.jpg);}
+header .contact_box .fb {background: url(images/custom/fb_33.jpg);}
 header .contact_box .tw {background: url(images/custom/tw_33.jpg);}
 header .contact_box .yt {background: url(images/custom/yt_33.jpg);}
 
@@ -93,6 +95,7 @@ ul.superfish.nav {
   z-index: 2;
   }
 ul.nav li a:hover {text-decoration: none;}
+
 ul.superfish.nav > li {
   border: 3px outset #302F2F; 
   padding:5px 12px 5px; 
@@ -125,25 +128,25 @@ ul.superfish.nav > li ul.children li a:hover {background: #ccc;}
   border-right: 1px solid #c0c4c6;
   
   /* IE10 Consumer Preview */ 
-  background-image: -ms-linear-gradient(top, #FFFFFF 0%, #E7E9EB 100%);
+  background-image: -ms-linear-gradient(top, #FFFFFF 0%, #EFF1F2 100%);
 
   /* Mozilla Firefox */ 
-  background-image: -moz-linear-gradient(top, #FFFFFF 0%, #E7E9EB 100%);
+  background-image: -moz-linear-gradient(top, #FFFFFF 0%, #EFF1F2 100%);
 
   /* Opera */ 
-  background-image: -o-linear-gradient(top, #FFFFFF 0%, #E7E9EB 100%);
+  background-image: -o-linear-gradient(top, #FFFFFF 0%, #EFF1F2 100%);
 
   /* Webkit (Safari/Chrome 10) */ 
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FFFFFF), color-stop(1, #E7E9EB));
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FFFFFF), color-stop(1, #EFF1F2));
 
   /* Webkit (Chrome 11+) */ 
-  background-image: -webkit-linear-gradient(top, #FFFFFF 0%, #E7E9EB 100%);
+  background-image: -webkit-linear-gradient(top, #FFFFFF 0%, #EFF1F2 100%);
 
   /* W3C Markup, IE10 Release Preview */ 
-  background-image: linear-gradient(to bottom, #FFFFFF 0%, #E7E9EB 100%);
+  background-image: linear-gradient(to bottom, #FFFFFF 0%, #EFF1F2 100%);
   }
 
-#content .image_block {margin: 40px auto 0; width: 840px;}
+#content .image_block {margin: 0 auto 0; width: 840px;}
 #content img.splash {
   opacity: 0.7;
   height: 550px;
@@ -155,31 +158,39 @@ ul.superfish.nav > li ul.children li a:hover {background: #ccc;}
   margin: 0 10px;
 }
 #content img.splash:hover {opacity: 1;}
-#content .tag_block p, #content .copy_block p {font-size: 22px; text-align: justify;}
+#content .tag_block p, #content .copy_block p {font-size: 22px;}
 #content .tag_block {width: 333px; margin: 65px auto; color: #9f9e9e;}
 #content .tag_block strong {color: #9f9e9e;}
 #content .copy_block {width: 820px; margin: 0 auto;}
 #content .copy_block p {margin: 0 0 20px;}
 #content .copy_block strong {font-weight: normal; color: #701212;}
+#content #content-area .entry {margin: 50px 80px; width: 740px; font: italic 18px/30px optima, serif;}
+#content #content-area .entry p {margin: 10px 0px;}
+#content .left {float: left; width: 370px;}
+
+#contact_page .seattle {margin: 30px 10px 10px;}
+#contact_page h1 {font-size: 28px;}
+#contact_page h3 {text-indent: 10px;}
+
 
 div#carousel1 { width:500px; height:300px; margin: 0 auto;}
-#alt-text, #title-text {text-shadow: none; color: #aaa; width: 500px; margin: 20px auto;}
-#title-text {}
+#alt-text, #title-text {text-shadow: none; color: #aaa; width: 500px;  text-align: center; margin: 0 auto 20px;}
+#title-text {font-size: 32px;}
 #alt-text {}
 
-#left-but, #right-but {font-size: 90px; position: relative; top: -200px; cursor: pointer;}
+#left-but, #right-but {font-size: 110px; font-style: normal; position: relative; top: -200px; cursor: pointer; }
 #left-but:hover, #right-but:hover {color: #666;}
-#left-but {left: -300px;}
-#right-but {left: 300px;}
+#left-but {left: 0px;}
+#right-but {left: 670px;}
 
 #sidebar {float: left; background: #eff1f2; width: 310px; height: 100%;}
 #sidebar div.nav {background: #e6e6e6; border: 1px solid #b4b4b4;}
-#sidebar .nav ul {margin: 0 auto; width: 300px;}
-#sidebar .nav ul li {display: inline-block; position: relative;}
-#sidebar .nav ul li a {padding: 10px 16px; color: #262626; font-size: 13px;}
+#sidebar nav ul {margin: 0 auto; width: 300px;}
+#sidebar nav ul li {display: inline-block; position: relative;}
+#sidebar nav ul li a {padding: 10px 16px; color: #262626; font-size: 13px;}
 
-#sidebar .side_box {border-bottom: 1px solid white; border-left: 1px solid white; position: relative;}
-#sidebar .side_box > div, #sidebar .nav {border-bottom: 1px solid #c8cfd2; width: 310px; padding: 12px 0;}
+#sidebar .side_box {border-bottom: 1px solid white; border-left: 1px solid white; position: relative; padding: 0 10px;}
+#sidebar .side_box > div, #sidebar nav {border-bottom: 1px solid #c8cfd2; width: 310px; padding: 12px 0;}
 
 #sidebar form, #sidebar .contact .wrapper {color: #7f7f7f; width: 220px; margin:0 auto;}
 #sidebar h1 {color: #262626; font: 22px lighter; margin: 30px 0 20px 10px;}
@@ -187,8 +198,11 @@ div#carousel1 { width:500px; height:300px; margin: 0 auto;}
 #sidebar form input {margin: 3px 0px 3px 0; height: 20px; float: right;}
 #sidebar form textarea {float: right;}
 #sidebar form input.submit {float: right;}
-#sidebar .triangle {
-/*  display: block;*/
+#sidebar .recent_news, #sidebar .practice_areas {display: none;}
+#sidebar #minitwitter-widget-2 {margin: 10px 5px 0; padding: 0 0 50px 0;}
+#sidebar img.media-logo {margin: 20px 10px 40px 30px; padding: 20px; border: 1px solid #C8CFD2;} 
+
+#sidebar .side_box .triangle {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -198,19 +212,19 @@ div#carousel1 { width:500px; height:300px; margin: 0 auto;}
   border-right: 40px solid rgba(255, 255, 255, 0);
   border-bottom: 40px solid #701211;
   }
-#sidebar .nav .triangle {
+#sidebar nav .triangle {
   display: none;
   position: absolute;
   left: 40%;
-  bottom: -34px;
+  bottom: -35px;
   border-left: transparent 11px solid;
   border-right: transparent 11px solid;
   border-bottom: transparent 11px solid;
-  border-top: #b4b4b4 11px solid;    
+  border-top: #C8CFD2 11px solid;    
   height: 0px;
   width: 0px;
 }
-#sidebar .nav .triangle:after {
+#sidebar nav .triangle:after {
   position: absolute;
   content: '';
   left: -10px;
@@ -218,15 +232,15 @@ div#carousel1 { width:500px; height:300px; margin: 0 auto;}
   border-left: transparent 10px solid;
   border-right: transparent 10px solid;
   border-bottom: transparent 10px solid;
-  border-top: #e6e6e6 10px solid;    
+  border-top: #EFF1F2 10px solid;    
   height: 0px;
   width: 0px;
 }
-#sidebar .nav li:hover .triangle {display: block;}
+#sidebar nav li:hover .triangle {display: block;}
 
 #sidebar .contact .phone_location, #sidebar .contact .phone_number {float: left; margin: 5px 5px 5px 0;}
 #sidebar .contact .chat_now {width: 171px; height: 40px; background: url(images/custom/live_chat.jpg); display: block; margin: 20px auto;}
-
+#sidebar .tweets_header {display: none;}
 
 #footer {width: 100%; height: 266px; clear: both; background: url(images/custom/header_bg.jpg) top left no-repeat;  position: relative;}
 #footer-content {position: absolute; top: 28px; left: 180px;}
